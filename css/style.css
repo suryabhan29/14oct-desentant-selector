@@ -1,0 +1,64 @@
+div.parent {
+    width: 500px;
+    height: 500px;
+    background: red;
+    border: 10px solid black;
+    position: relative;
+    /*
+        i used margin two property
+        first value t/b  second value l/r
+    */
+    margin: 160px auto;
+}
+
+/*
+    today we used decentent selector
+*/
+div.parent .common{
+    width: 250px;
+    height: 250px;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transform: rotate(0deg);
+    
+}
+
+.parent .child1{
+    /*
+        this is state 1
+    */
+    width: 250px;
+    height: 250px;
+    background: green;
+    transform-origin: left top;
+   
+    
+}
+.parent:hover .child1, .parent:hover .child2, .parent:hover .child3, .parent:hover .child4 {
+    /*
+        state 2
+    */
+    transform: rotate(360deg);
+    
+}
+.parent .child2{
+    background: orange;
+    transform-origin: left bottom;
+    transform: rotate(0deg);
+}
+.parent .child3{
+    background-color: purple;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform-origin: right top;
+}
+.parent .child4{
+    background-color: blue;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    transform-origin: right bottom;
+}
+
